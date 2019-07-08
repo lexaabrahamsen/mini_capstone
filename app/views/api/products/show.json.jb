@@ -1,7 +1,7 @@
   {
-    id: @product.id,
-    name: @product.name,
-    description: @product.description,
-    price: @product.price
-    image_url: @recipie.image_url
+    id: params[:id] || @product.id,
+    name: params[:name] || @product.name,
+    description: params[:description] || @product.description,
+    price: params[:price] || @product.price,
+    image_url: params[:image_url] || @product.image_url
   }
