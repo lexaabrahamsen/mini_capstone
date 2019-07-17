@@ -1,7 +1,9 @@
-  {
-    id: params[:id] || @product.id,
-    name: params[:name] || @product.name,
-    description: params[:description] || @product.description,
-    price: params[:price] || @product.price,
-    image_url: params[:image_url] || @product.image_url
-  }
+{
+  id: @order.id,
+  subtotal: @order.subtotal,
+  tax: @order.tax,
+  total: @order.total,
+  user_id: @order.user_id,
+  product: @order.product,
+  quantity: @order.quantity
+}
