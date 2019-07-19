@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   has_many :orders
-  belongs_to :supplier
+#  belongs_to :supplier
   has_many :images
   has_many :category_products
   has_many :carted_products
@@ -14,9 +14,9 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :description, length: { in: 10..500 }
 
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
 
   def is_discounted?
     if price < 10
