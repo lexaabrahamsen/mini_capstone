@@ -38,6 +38,12 @@ class ProductsController < ApplicationController
       description: params[:description]
     )
   end
+
+  def destroy
+    #@product = Product.find_by(:id params[:id])
+    @product.destroy
+    redirect_to "/products"
+  end
 end
 
 
